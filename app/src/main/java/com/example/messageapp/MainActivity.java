@@ -68,7 +68,7 @@ public class MainActivity extends ListActivity implements
 
             threadCursor.moveToLast();
             do {
-                smsBody = threadCursor.getString(threadCursor.getColumnIndexOrThrow("snippet"));
+                smsBody = AESEngine.getInstance().decryptText(threadCursor.getString(threadCursor.getColumnIndexOrThrow("snippet")));
                 thread = threadCursor.getString(threadCursor.getColumnIndexOrThrow("thread_id"));
                 msgCount = threadCursor.getString(threadCursor.getColumnIndexOrThrow("msg_count"));
                 number = "";

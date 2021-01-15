@@ -131,7 +131,7 @@ public class ContactMessages extends ListActivity {
 
             c.moveToPosition(c.getCount() - maxListSize);
             while (c.moveToNext()) {
-                body = c.getString(c.getColumnIndexOrThrow("body"));
+                body = AESEngine.getInstance().decryptText(c.getString(c.getColumnIndexOrThrow("body")));
                 number = c.getString(c.getColumnIndexOrThrow("address"));
                 dateString = c.getString(c.getColumnIndexOrThrow("date"));
                 date = new Date(Long.parseLong(dateString));
@@ -231,9 +231,10 @@ public class ContactMessages extends ListActivity {
     }
 
 
+
     public void buttonSendOnClick(View v) {
 
-        smsSent = String.valueOf(smsReceived.getText());
+        smsSent =AESEngine.getInstance().encryptText(String.valueOf(smsReceived.getText()));
 
         if (smsSent.isEmpty()) {
             Toast.makeText(getBaseContext(), "Message field is empty.",
@@ -271,7 +272,7 @@ public class ContactMessages extends ListActivity {
 
         final Date date = new Date(System.currentTimeMillis());
 
-        contactItems.add(new SmsItem("Me", smsSent, simpleDateFormat.format(date)));
+        contactItems.add(new SmsItem("Me", AESEngine.getInstance().decryptText(smsSent), simpleDateFormat.format(date)));
         contactItemAdapter.notifyDataSetChanged();
     }
 
