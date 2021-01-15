@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="20"
+                  android:orientation="vertical">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/textphone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:completionThreshold="1"
+            android:hint="@string/contact_info"
+            android:inputType="textMultiLine"/>
+
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:stackFromBottom="true"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom"
+                  android:gravity="bottom"
+                  android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textsms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="20"/>
+
+        <ImageButton
+            android:id="@+id/btsend"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:onClick="buttonSendOnClick"
+            android:background="@drawable/ic_action_send_now_large"
+            android:text="Send"
+            />
+    </LinearLayout>
+
+</LinearLayout>

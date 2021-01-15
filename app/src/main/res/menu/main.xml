@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_compose"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="New Message"
+        android:icon="@drawable/ic_action_new_email"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_action_settings"/>
+</menu>

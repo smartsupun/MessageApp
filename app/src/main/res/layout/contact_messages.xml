@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="20"
+                  android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textCont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stackFromBottom="true"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom"
+                  android:gravity="bottom"
+                  android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textsms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="20"
+            android:inputType="textMultiLine"
+            android:importantForAutofill="no" />
+
+        <ImageButton
+            android:id="@+id/btsend"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:onClick="buttonSendOnClick"
+            android:background="@drawable/ic_action_send_now_large"
+            android:text="@string/send"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+</LinearLayout>
