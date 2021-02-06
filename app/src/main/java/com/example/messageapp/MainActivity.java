@@ -15,10 +15,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class MainActivity extends ListActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
+    FloatingActionButton add_button;
 
     private static final int URL_LOADER = 0;
     //Keeps track of list items' thread number, to pass to contact's messages
@@ -35,6 +38,15 @@ public class MainActivity extends ListActivity implements
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        add_button = findViewById(R.id.add_button);
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Message.class);
+                startActivity(intent);
+            }
+        });
+
 
         //layout int value not used
         threadAdapter = new ThreadListAdapter(this, 0, listThreadItems);

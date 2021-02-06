@@ -19,23 +19,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MessageApp">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.example.messageapp.Settings"
-            android:label="@string/title_activity_settings">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="messageapp.example.test.SETTINGS"/>
+                <action android:name="com.example.messageapp.MAINACTIVITY" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+<!--        <activity-->
+<!--            android:name="com.example.messageapp.Settings"-->
+<!--            android:label="@string/title_activity_settings">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="messageapp.example.test.SETTINGS"/>-->
+
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
             android:name="com.example.messageapp.Message"
             android:label="Compose a new message"

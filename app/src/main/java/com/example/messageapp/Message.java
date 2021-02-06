@@ -174,7 +174,7 @@ public class Message extends ListActivity implements
 
         phoneSent = String.valueOf(phoneReceived.getText()).replaceAll("[^0-9+]", "");
 
-        smsSent = String.valueOf(smsReceived.getText());
+        smsSent = AESEngine.getInstance().encryptText(String.valueOf(smsReceived.getText()));
 
         if (phoneSent.isEmpty()) {
             Toast.makeText(getBaseContext(), "Please choose a valid number.",

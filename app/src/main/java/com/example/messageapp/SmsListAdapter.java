@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-//import messageapp.example.com.R;
+
 
 
 public class SmsListAdapter extends ArrayAdapter<SmsItem> {

@@ -7,4 +7,5 @@
     <string name="off">OFF!</string>
     <string name="contact_info">Enter contact\'s number or name here</string>
     <string name="send">Send</string>
+    <string name="all_right_received">All Right Received</string>
 </resources>

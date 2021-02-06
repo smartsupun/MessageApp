@@ -17,7 +17,7 @@
             android:layout_gravity="center"
             android:completionThreshold="1"
             android:hint="@string/contact_info"
-            android:inputType="textMultiLine"/>
+            android:inputType="phone"/>
 
 
         <ListView
@@ -39,7 +39,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_weight="20"/>
+            android:layout_weight="20"
+            android:inputType="textMultiLine"
+            />
 
         <ImageButton
             android:id="@+id/btsend"
@@ -50,6 +52,7 @@
             android:onClick="buttonSendOnClick"
             android:background="@drawable/ic_action_send_now_large"
             android:text="Send"
+
             />
     </LinearLayout>
 
